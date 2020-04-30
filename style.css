@@ -1,0 +1,137 @@
+/* Global view aka Desktop view*/
+body {
+    font-family: 'Asap', sans-serif;
+    color: white;
+    background-color: #ebebeb;
+}
+
+.container {
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+
+.header-container {
+    background-color: rgb(66, 63, 63);
+    min-height: 100px;
+    margin-bottom: 40px;
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    max-width: 1024px;
+    min-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.navbutton {
+    border: 1px solid white;
+    display: inline-block;
+    padding: 11px 25px;
+    margin-left: 20px;
+}
+
+.col {
+    background-color: mediumaquamarine;
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.hide-desktop-only {
+    display: none;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+}
+
+.col p {
+    font-size: 0.875rem;
+    padding: 20px 25px;
+    line-height: 1.25rem;
+}
+
+.col p::first-line {
+    font-weight: bold;
+}
+
+.mob-wrapper {
+    display: none;
+}
+
+/* Tablet view */
+@media (max-width: 768px){
+    
+    .col {
+        width: 47%;
+    }
+
+    .hide-desktop-only {
+        display: block;
+    }
+
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 40px;
+    }
+
+    .navbutton {
+        display: block;
+        margin-left: 0;
+    }
+
+    .logo {
+        padding: 40px 0;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 400px) {
+     
+    .col {
+        width: 100%;
+    }
+
+    .hide-mobile-only {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .mob-wrapper {
+        display: block;
+    }
+
+    .burger-menu {
+        padding-bottom: 20px;
+    }
+
+    .mob-wrapper .navbutton {
+        display: none;
+    }
+}
